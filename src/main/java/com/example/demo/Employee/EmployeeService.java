@@ -83,7 +83,7 @@ public class EmployeeService {
     @Transactional
     public EmployeeDTO getEmployeeByCredentials( String email, String password){
 
-        Employee emplogit remote show origin yee = employeeRepository.getEmployeeByCredentials(email,password);
+        Employee employee = employeeRepository.getEmployeeByCredentials(email,password);
         EmployeeDTO employeeDTO = new EmployeeDTO();
         modelMapper.map(employee,employeeDTO);
         return  employeeDTO;
